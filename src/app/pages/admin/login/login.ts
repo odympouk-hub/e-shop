@@ -16,16 +16,12 @@ export class Login {
     passowrd: ''
 
   };
-constructor(private router:Router){}
+  constructor(private router: Router) { }
 
-
-
-
-
-  onLogin(){
-    if(this.loginObj.username == "admin" && this.loginObj.passowrd == "334455"){
-this.router.navigateByUrl('/products')
-    }else{
+  onLogin() {
+    if (this.loginObj.username == "admin" && this.loginObj.passowrd == "334455") {
+      this.router.navigateByUrl('/products')
+    } else {
       alert('wrong Credentianls')
     }
 

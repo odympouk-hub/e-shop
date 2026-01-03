@@ -1,0 +1,33 @@
+.product-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.product-img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Card Title */
+.product-card .card-title {
+    font-weight: 600;
+}
+
+/* Add To Cart Button */
+.product-card .btn-success {
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+/* Disabled Button */
+.product-card .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

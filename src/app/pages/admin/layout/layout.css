@@ -1,0 +1,60 @@
+/* Navbar height & spacing */
+.navbar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #2f3e46 !important;
+    }
+
+/* Brand Styling */
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+    color: #dcdcdc !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.search-box {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 4px 10px;
+  border-radius: 20px;
+  transition: background 0.2s ease;
+}
+
+.search-box:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 0.85rem;
+  width: 120px; /* μικρό & διακριτικό */
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 2px;
+  font-size: 1rem;
+}

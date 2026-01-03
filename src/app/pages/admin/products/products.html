@@ -1,0 +1,20 @@
+<div class="container my-5">
+  <h2 class="mb-4 text-center">Our Products</h2>
+  <div class="row g-4">
+    <div class="col-md-4 col-sm-6" *ngFor="let item of productlist">
+      <div class="card product-card h-100 shadow-sm">
+        <img [src]="item.thumbnailImage" class="card-img-top product-img" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ item.productShortName }}</h5>
+          <span class="badge bg-primary mb-2">{{ item.categoryName }}</span>
+          <p class="card-text text-muted small">{{ item.desscriprion }}</p>
+          <h5 class="mt-auto">${{ item.price }}</h5>
+          <span [class]="item.isInStock ? 'badge bg-success' : 'badge bg-danger'">
+            {{ item.isInStock ? 'In Stock' : 'Out of Stock' }}
+          </span>
+         <button class="btn btn-success mt-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

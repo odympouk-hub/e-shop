@@ -2,8 +2,8 @@ import { Routes } from '@angular/router';
 import { Login } from './pages/admin/login/login';
 import { Layout } from './pages/admin/layout/layout';
 import { Products } from './pages/admin/products/products';
-import { Order } from './pages/admin/order/order';
-import { CategoryProducts } from './pages/website/category-products/category-products';
+
+
 import { Categories } from './pages/admin/categories/categories';
 import { Customer } from './pages/admin/customer/customer';
 import { Cart } from './pages/admin/cart/cart';

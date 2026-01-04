@@ -11,33 +11,25 @@ import { User } from '../../../models/user';
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
-export class Login implements OnInit {
+export class Login  {
   loginObj: any = {
 
     username: '',
-    passowrd: ''
+    password: ''
 
   };
   constructor(private router: Router, private userService: UserService) {}
 
-  ngOnInit(): void {
-    this.userService.getUser(1).subscribe({
-      next: (user: User) => {
-        console.log(user);
+
+
+  onLogin() { 
+    this.userService.getUser(this.loginObj.username ,this.loginObj.password).subscribe({
+      next: () => {
+        this.router.navigateByUrl('/products');
       },
       error: (error) => {
         console.log(error);
       }
     });
   }
-
-  onLogin() {
-    if (this.loginObj.username == "admin" && this.loginObj.passowrd == "334455") {
-      this.router.navigateByUrl('/products')
-    } else {
-      alert('wrong Credentianls')
-    }
-
-  }
-
 }

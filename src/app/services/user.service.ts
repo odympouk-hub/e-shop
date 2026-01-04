@@ -5,11 +5,12 @@ import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root',
+  
 })
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  getUser(user: number) {
-    return this.http.get<User>(`${environment.apiUrl}/user?id=${user}`);
+  getUser(username:string,password:string) {
+    return this.http.get<User>(`${environment.apiUrl}/user?username=${username}&password=${password}`);
   }
 }

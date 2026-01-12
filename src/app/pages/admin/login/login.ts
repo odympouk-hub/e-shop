@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../../../services/user.service';
 import { User } from '../../../models/user';
 
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -11,19 +12,19 @@ import { User } from '../../../models/user';
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
-export class Login  {
+export class Login {
   loginObj: any = {
 
     username: '',
     password: ''
 
   };
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(private router: Router, private userService: UserService) { }
+  
 
 
-
-  onLogin() { 
-    this.userService.getUser(this.loginObj.username ,this.loginObj.password).subscribe({
+  onLogin() {
+    this.userService.getUser(this.loginObj.username, this.loginObj.password).subscribe({
       next: () => {
         this.router.navigateByUrl('/products');
       },
@@ -32,4 +33,6 @@ export class Login  {
       }
     });
   }
+
+
 }

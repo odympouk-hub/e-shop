@@ -1,0 +1,6 @@
+<p *ngIf="isWelcoming ; else notWelcoming">
+    Welcome friend
+</p>
+<ng-template #notWelcoming>
+    <p>Not welcome here</p>
+</ng-template>

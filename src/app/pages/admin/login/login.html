@@ -1,54 +1,58 @@
 <div class="parent">
-
     <div class="login-root">
         <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh; flex-grow: 1">
             <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9">
-                <div  class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-                    <h1>Login </h1>
+                <div>
+                    @if (Welcoming) {
+                    <h2>Welcome friend</h2>
+                    } @else {
+                    <h2>You are not Welcome here</h2>
+                    }
                 </div>
-                <div class="formbg-outer">
-                    <div class="formbg">
-                        <div class="formbg-inner padding-horizontal--48">
-                            <span class="padding-bottom--15">Sign in to your account</span>
-                            <form id="stripe-login">
-                                <div class="field padding-bottom--24">
-                                    <label for="email">Username</label>
-                                    <input type="Username" [(ngModel)]="loginObj.username" name="Username" />
-                                </div>
-                                <div class="field padding-bottom--24">
-                                    <div class="grid--50-50">
-                                        <label for="password">Password</label>
-                                        <div class="reset-pass">
-                                            <a href="#">Forgot your password?</a>
-                                        </div>
+            </div>
+            <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+                <h1>Login </h1>
+            </div>
+            <div class="formbg-outer">
+                <div class="formbg">
+                    <div class="formbg-inner padding-horizontal--48">
+                        <span class="padding-bottom--15">Sign in to your account</span>
+                        <form id="stripe-login">
+                            <div class="field padding-bottom--24">
+                                <label for="email">Username</label>
+                                <input type="Username" [(ngModel)]="loginObj.username" name="Username" />
+                            </div>
+                            <div class="field padding-bottom--24">
+                                <div class="grid--50-50">
+                                    <label for="password">Password</label>
+                                    <div class="reset-pass">
+                                        <a href="#">Forgot your password?</a>
                                     </div>
-                                    <input type="password" [(ngModel)]="loginObj.password" name="password" />
                                 </div>
-                                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
-                                    <label for="checkbox">
-                                        <input type="checkbox" name="checkbox" />
-                                        Stay signed in for a week
-                                    </label>
-                                </div>
-                                <div class="field padding-bottom--24">
-                                    <input type="button" (click)="onLogin()" name="submit" value="Continue" />
-                                </div>
-                            </form>
+                                <input type="password" [(ngModel)]="loginObj.password" name="password" />
+                            </div>
+                            <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
+                                <label for="checkbox">
+                                    <input type="checkbox" name="checkbox" />
+                                    Stay signed in for a week
+                                </label>
+                            </div>
+                            <div class="field padding-bottom--24">
+                                <input type="button" (click)="onLogin()" name="submit" value="Continue" />
+                            </div>
+                        </form>
 
-                        </div>
-                        
                     </div>
+
                 </div>
-                <div class="footer-link padding-top--24">
-                    <span>Don't have an account? <a href="">Sign up</a></span>
-                    <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+            </div>
+            <div class="footer-link padding-top--24">
+                <span>Don't have an account? <a href="">Sign up</a></span>
+                <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
 
 
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
-

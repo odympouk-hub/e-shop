@@ -9,13 +9,13 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
 export class Login {
+  Welcoming: boolean = true
 
- 
   loginObj: any = {
 
     username: '',
@@ -23,7 +23,7 @@ export class Login {
 
   };
   constructor(private router: Router, private userService: UserService) { }
-  
+
 
 
   onLogin() {
@@ -38,5 +38,5 @@ export class Login {
   }
 
 
- 
+
 }

@@ -5,7 +5,7 @@ import { Products } from './pages/admin/products/products';
 import { Categories } from './pages/admin/categories/categories';
 import { Customer } from './pages/admin/customer/customer';
 import { Cart } from './pages/admin/cart/cart';
-import { TestComponent } from './pages/admin/test-component/test-component';
+
 
 export const routes: Routes = [
 
@@ -44,10 +44,9 @@ component:Categories
     path:'cart',
     component:Cart
 },
-{
-    path:'test-component',
-    component:TestComponent
-}
+
+ 
+
 ]
 
 },

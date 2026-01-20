@@ -4,18 +4,17 @@ import { Router } from '@angular/router';
 import { UserService } from '../../../services/user.service';
 import { User } from '../../../models/user';
 import { CommonModule } from '@angular/common';
+import { Test } from "../../../test/test";
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, Test],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
 export class Login {
-  Welcoming: boolean = true
-
   loginObj: any = {
 
     username: '',
